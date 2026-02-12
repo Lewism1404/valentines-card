@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose: #ff6b9d;
+            --deep-rose: #c44569;
+            --blush: #ffc3d4;
+            --cream: #fff5f7;
+            --gold: #d4af37;
+            --shadow: rgba(196, 69, 105, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--cream);
+            overflow-x: hidden;
+            color: #2c2c2c;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+                opacity: 0.9;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .hearts-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: var(--rose);
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .heart:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+        .heart:nth-child(3) { top: 40%; left: 15%; animation-delay: 2s; }
+        .heart:nth-child(4) { top: 60%; left: 85%; animation-delay: 0.5s; }
+        .heart:nth-child(5) { top: 80%; left: 20%; animation-delay: 1.5s; }
+        .heart:nth-child(6) { top: 30%; left: 50%; animation-delay: 2.5s; }
+        .heart:nth-child(7) { top: 70%; left: 60%; animation-delay: 3s; }
+        .heart:nth-child(8) { top: 15%; left: 40%; animation-delay: 0.8s; }
+        
+        section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px var(--shadow);
+            border: 1px solid rgba(255, 107, 157, 0.2);
+            animation: scaleIn 1s ease-out;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--deep-rose);
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            animation: fadeInUp 0.8s ease-out;
+            text-shadow: 2px 2px 4px rgba(196, 69, 105, 0.1);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--rose);
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-style: italic;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            line-height: 2.2;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+        
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 40px auto;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+        }
+        
+        .heart-icon {
+            font-size: 3rem;
+            color: var(--rose);
+            margin: 30px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        section:nth-child(even) .content {
+            background: rgba(255, 243, 245, 0.95);
+        }
+
+        /* Photo Gallery Section */
+        .gallery-content {
+            max-width: 1200px;
+            padding: 60px 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow);
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1.2rem;
+                line-height: 1.9;
+            }
+            
+            .content {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-background">
+        <div class="heart">❤️</div>
+        <div class="heart">💕</div>
+        <div class="heart">❤️</div>
+        <div class="heart">💕</div>
+        <div class="heart">❤️</div>
+        <div class="heart">💕</div>
+        <div class="heart">❤️</div>
+        <div class="heart">💕</div>
+    </div>
+
+    <section style="background-image: url('first.jpg');">
+        <div class="content gallery-content">
+            <h2>Happy Valentine's Day</h2>
+            <div class="divider"></div>
+            <p>A snippet of the times that make me happy.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="photo1.jpg" alt="Our memory 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo2.jpg" alt="Our memory 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo3.jpg" alt="Our memory 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo4.jpg" alt="Our memory 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo5.jpg" alt="Our memory 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo6.jpg" alt="Our memory 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-image: url('second.jpg');">
+        <div class="content">
+            <h1>To you</h1>
+            <div class="divider"></div>
+            <p>To the most amazing person in my life thank you for always being there for me. I love you more than words can say.</p>
+            <p>You make every day brighter just by being in it, and put a smile on my face every time I see yours.</p>
+            <div class="heart-icon">❤️</div>
+        </div>
+    </section>
+
+    <section style="background-image: url('third.jpg');">
+        <div class="content">
+            <h2>You Are My Everything</h2>
+            <div class="divider"></div>
+            <p>From the moment we met, I knew you were special and you continue to show me that you are.</p>
+            <p>Every day with you is a blessing I never want to take for granted. And wanted to show you that a few years in computing can be shown to you.</p>
+            <p>Thank you for being you.</p>
+        </div>
+    </section>
+
+    <section style="background-image: url('fourth.jpg');">
+        <div class="content">
+            <h2>All My Love</h2>
+            <div class="divider"></div>
+            <p>You're my best friend in this cahotic world, my partner in crime, and the love of my life.</p>
+            <p>I can't wait to make more special memories with you and turn to chapters we might not of thought of when we first met.</p>
+            <div class="heart-icon">💕</div>
+        </div>
+    </section>
+
+    <section style="background-image: url('kiss.jpg');">
+        <div class="content">
+            <h2>Forever Yours</h2>
+            <div class="divider"></div>
+            <p>I know this has been tough, but we are a strong team and I believe in us.</p>
+            <p>Here's to us, today, tomorrow and always.</p>
+            <div class="heart-icon">❤️</div>
+            <p style="font-size: 1.2rem; margin-top: 30px; font-style: italic; color: var(--deep-rose);">
+                With all my love,<br>
+                Lewis xx
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
